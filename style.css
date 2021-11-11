@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+/* Password wrap */
+.password-wrap {
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 4px 3px 10px rgb(129, 6, 27);
+    margin: 10px 10px;
+    font-size: 30px;
+}
+.password-wrap input{
+    width: 100%;
+    padding: 12px 12px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 10px 0px;
+    font-size: 25px;
+}
+.password-wrap button{
+    background-color: rgb(204, 83, 83);
+    box-shadow: 4px 3px 10px rgb(90, 8, 22);
+    color: black;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    
+    
+}
+
+
+    
