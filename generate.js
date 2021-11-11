@@ -2,12 +2,12 @@
 const password = document.querySelector('#password');
 const button = document.querySelector('button');
 
-//Data for Password Generation
+//Data for Password Generation //
 let characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+{}:"<>?|;';
 let passwordLength = 8;
 let passwordValue = '';
 
-//Creating Password Generation
+//Creating Password Generation //
 const createPassword = () => {
     passwordValue = ''; 
     let desiredLength =  prompt("Choose password length between 8 - 128");
