@@ -29,9 +29,12 @@ let number = getRandomNumber();
 let symbol = getRandomSymbol();
 
 // Password Function
+// character count 8-128
+// lower case upper case num and special
+// at least one character type is required
+// create random password
 function randomize() {
     finalPassword = [];
-    // Desired Password Options
     let desiredLength = prompt(`Choose password length of 8 to 128.`);
     let desiredUpper = confirm(`Would you like uppercase letters?`);
     let desiredNumber = confirm(`Would you like numbers?`);
@@ -53,14 +56,15 @@ function randomize() {
             }
         }
     }
+    
     if (desiredLength > 128) {
-        desiredLength = prompt('Password must be between 8 and 128 characters');
+        desiredLength = prompt('Password must be between 8 and 128 characters.');
         if (desiredLength > 128) {
-            alert('Apassword is too long. Try again.');
+            alert('Password is too long.');
             return;
         }
     }
-    // Iterates Over Desired Length
+        // Desired Length
     for (let i = 0; i < desiredLength; i++) {
         // Lowercase
         if (lowercase) {
