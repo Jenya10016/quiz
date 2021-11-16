@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="reset" href="./reset.css">
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome SDK -->
+    <script src="https://kit.fontawesome.com/4e9ef12d90.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-
-<!-- Password Wrap -->
-<div class="password-wrap">
-    <p>Password Generator</p>
-    <input type="text" placeholder="Your Secure Password" id="password"/>
-    <button type="button">Generate Password</button>
-</div>
-
-<script src="./generate.js"></script>
-    
+    <div class="wrapper">
+        <header>
+            <h1>Password Generator</h1>
+        </header>
+        <div class="card">
+            <div class="card-header">
+                <h2>Generate a Password</h2>
+            </div>
+            <div class="center">
+                <textarea id="result">Your Secure Password</textarea>
+            </div>
+            <div class="card-footer">
+                <div id="generate" class="btn shadow" onclick="randomize()">Generate Password</div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="generate.js"></script>
 </body>
+
 </html>
