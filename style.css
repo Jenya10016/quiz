@@ -27,7 +27,7 @@ body {
 header {
   text-align: center;
   padding: 20px;
-  padding-top: 0px;
+  padding-top: 10px;
   color: hsl(206, 17%, 28%);
 }
 
@@ -55,6 +55,7 @@ header {
 
 .card-body {
   min-height: 100px;
+  text-align: center;
 }
 
 .card-footer {
@@ -67,12 +68,14 @@ header {
   width: 100%;
   background: #e7e9eb;
   height: 2px;
+  text-align: center;
 }
 
 .card-footer::after {
   content: " ";
   display: block;
   clear: both;
+  text-align: center;
 }
 
 .btn {
@@ -91,15 +94,6 @@ header {
   cursor: pointer;
 }
 
-button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
-}
-
-.float-right {
-  float: right;
-}
-
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -113,9 +107,9 @@ button[disabled] {
   padding-bottom: 85px;
   font-size: 1.2rem;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
+  border: 2px dashed #0d2949;
   border-radius: 6px;
   resize: none;
   overflow: hidden;
@@ -126,10 +120,12 @@ button[disabled] {
     font-size: 1rem;
     margin: 16px 0px 0px 0px;
     padding: 10px 15px;
+    text-align: center;
   }
 
   #password {
     font-size: 1rem;
+    text-align: center;
   }
 }
 
