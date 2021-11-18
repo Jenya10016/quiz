@@ -1,136 +1,104 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html,
-body,
-.wrapper {
-  height: 100%;
+.container {
+  font-family: 'Open Sans', sans-serif;
+  max-width: 1200px;
   margin: 0;
-  padding: 0;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-body {
-  font-family: sans-serif;
-  background-color: white;
-}
-
-.wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: white;
-}
-
-header {
-  text-align: center;
-  padding: 20px;
-  padding-top: 10px;
-  color: hsl(206, 17%, 28%);
-}
-
-.card {
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 5px;
-  border-width: 1px;
-  box-shadow: rgba(117, 27, 27, 0.80) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
-  font-size: 18px;
+.quiz-box {
+  width: 300px;
   margin: 0 auto;
-  max-width: 800px;
-  padding: 30px 40px;
-  text-align: center;
+  background-color: rgb(221, 83, 83);
+  padding: 1rem 4rem 10rem 2rem;
+  border: 3px solid var (--color-primary);
+  border-radius: 10px;
 }
 
-.card-header::after {
-  content: " ";
-  display: block;
+.quiz-box h1{
+  background-color: var(--color-primary);
+  font-size: 3rem;
+  text-align: center;
+  color: var (--white);
+  padding: 1rem 0;
   width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-  text-align: center;
+  margin-bottom: 1rem;
+  border-radius: 4px;
 }
 
-.card-body {
-  min-height: 100px;
-  text-align: center;
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.card-footer {
-  text-align: center;
+.quiz-header #progress{
+  color: var(--color-primary);
+  font-size: 1.7rem;
+  font-weight: 700;
 }
 
-.card-footer::before {
-  content: " ";
-  display: block;
+.quiz-header #count-down{
+  font-size: 2rem;
+  font-weight: 700;
+  background-color:beige;
+  padding:5px;
+  border-radius: 4px;
+
+}
+
+.quiz-box #questions {
+  font-size: 1 rem;
+  font-weight: 700;
+  color: black;
+  border: 1px solid black;
+  padding: 5px 5px;
+}
+
+.btn{
+  text-align: left;
+  background-color:beige;
   width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-  text-align: center;
+  font-size: 1rem;
+  color: black;
+  border-radius:4px;
+  margin:5px;
 }
 
-.card-footer::after {
-  content: " ";
-  display: block;
-  clear: both;
-  text-align: center;
-}
-
-.btn {
-  border: none;
-  background-color: hsl(360, 91%, 36%);
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: hsl(0, 0%, 100%);
-  display: inline-block;
-  font-size: 22px;
-  line-height: 22px;
-  margin: 16px 16px 16px 20px;
-  padding: 14px 34px;
-  text-align: center;
+.btn:hover {
   cursor: pointer;
+  background-color: rgb(122, 9, 9)
 }
 
-#password {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  display: block;
-  width: 100%;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 85px;
-  font-size: 1.2rem;
+.btn:active {
+  cursor: pointer;
+  background-color: rgb(122, 9, 9)
+}
+
+#score{
+  color: black;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  border: 2px dashed #0d2949;
-  border-radius: 6px;
-  resize: none;
-  overflow: hidden;
+  font-size: 1.5rem;
 }
 
-@media (max-width: 690px) {
-  .btn {
-    font-size: 1rem;
-    margin: 16px 0px 0px 0px;
-    padding: 10px 15px;
-    text-align: center;
-  }
-
-  #password {
-    font-size: 1rem;
-    text-align: center;
-  }
+.quiz-repeat{
+  text-align:center;
+  margin: 0 auto;
 }
 
-@media (max-width: 500px) {
-  .btn {
-    font-size: 0.8rem;
-  }
+.quiz-repeat a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
+  background-color: beige;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  transition: all .3s;
+}
+
+.quiz-repeat a:hover{
+  background-color: var(--color-primary);
 }

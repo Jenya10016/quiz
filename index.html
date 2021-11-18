@@ -5,31 +5,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
+    <title>Code Quiz</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="wrapper">
-        <header>
-            <h1>Password Generator</h1>
-        </header>
-        <div class="card">
-            <div class="card-header">
-                <h2>Generate a Password</h2>
-            </div>
-            <div class="center">
-                <textarea id="result">Your Secure Password</textarea>
-            </div>
-            <div class="card-footer">
-                <div id="generate" class="btn shadow" onclick="randomize()">Generate Password</div>
+        <div class="container">
+            <!-- Main quiz box -->
+            <div class="quiz-box">
+                <div id="quiz"></div>
+                    <h1>Code Quiz</h1>
+                <div class="quiz-header">
+                        <p id="progress">Question x of y</p>
+                        <p id="count-down">120</p>
+                </div>
+                <p id="question">Questions below</p>
+
+                <div class="buttons" id="buttons">
+                    <button class="btn" id="btn0">
+                        A. <span id="choice0"></span>
+                    </button>
+                    <button class="btn" id="btn1">
+                        B. <span id="choice1"></span>
+                    </button>
+                    <button class="btn" id="btn2">
+                        C. <span id="choice2"></span>
+                    </button>
+                    <button class="btn" id="btn3">
+                        D. <span id="choice3"></span>
+                    </button>
             </div>
             
-            </div>
         </div>
-    </div>
-    </div>
-    <script src="generate.js"></script>
+        
+        <script src="newapp.js"></script>
 </body>
 
 </html>
