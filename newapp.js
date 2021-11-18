@@ -7,8 +7,10 @@ var currentQestionEl = document.getElementById("question");
 var startBtnEl = document.getElementById("startBtn");
 
 //Quiz Variables
-var score 
+var quizTime = 120
+var quizTimer
 var currentQuestion
+var timerID
 
 
 
@@ -19,27 +21,25 @@ function startQuiz(){
 
     // hide start buttons
     startBtnEl.style.display = "none";
+    timerEl.textContent = `Time: ${quizTime}`;
 
     //start timerEl
 
-    let time = 5;
-let quizTimeInMinutes = time * 60 * 60;
-quizTime = quizTimeInMinutes / 60;
-
-let counting = document.getElementById("count-down");
-
-function startCountdown() {
-    let quizTimer = setInterval (function() {
+    quizTimer = setInterval (function() {
         if (quizTime <= 0) {
             clearInterval(quizTimer);
             showScores();
+
+
         }else {
             quizTime--;
             let sec = Math.floor(quizTime % 60);
             let min = Math.floor(quizTime / 60) % 60;
-            counting.textContent = `Time: ${min} : ${sec}`;
+            timerEl.textContent = `Time: ${quizTime}`;
         }
     },1000)
+
+    
 
     //show question
 
