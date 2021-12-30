@@ -33,13 +33,10 @@ var questions = [{
 
 //logic
 function startQuiz() {
-    console.log("start quiz")
 
     // hide start buttons
     startBtnEl.style.visibility = "hidden";
     nextBtnEl.style.visibility = "visible";
-    
- //   console.log( nextBtnEl.style.visibility);
     
     timerEl.textContent = `Time: ${quizTime}`;
 
