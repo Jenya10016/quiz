@@ -149,7 +149,7 @@ function handleQuestionClick(){
 
 function endQuiz() {
 
-	var name = prompt("Please enter your name", "");
+	var name = prompt("Please enter your initials", "");
    
 	nextBtnEl.style.visibility = "hidden";
 	clearInterval(quizTimer);
