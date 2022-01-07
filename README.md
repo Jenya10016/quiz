@@ -1,7 +1,8 @@
-# codeQuiz
-![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+# Code Quiz
+
 ## Descripton
-This repository contains the code for a deployed web app that fetches cocktail recipes and current cryptocurrency prices and icons
+
+This repository contains a timed quiz including results of correct and wrong answers.
 
 
 ## Table of Contents
