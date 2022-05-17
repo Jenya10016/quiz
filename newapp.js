@@ -1,6 +1,7 @@
 //reference elements
-
+console.log("hello app");
 var timerEl = document.getElementById("count-down");
+var scoreHistory = document.getElementById("score-history");
 var progressEl = document.getElementById("progress");
 var questionBtnEl = document.getElementById("buttons");
 var currentQuestionEl = document.getElementById("question");
@@ -8,6 +9,7 @@ var startBtnEl = document.getElementById("startBtn");
 var nextBtnEl = document.getElementById("nextBtn");
 
 //Quiz Variables
+var allScores = [];
 var quizTime = 120
 var quizTimer
 var score=0;
@@ -56,7 +58,6 @@ function startQuiz() {
             timerEl.textContent = `Time: ${quizTime}`;
         }
     }, 1000)
-
 
     //show question
     showQuestion()
@@ -144,22 +145,44 @@ function handleQuestionClick(){
 		endQuiz();
 	}			  	 
 }
-
 }
-
 function endQuiz() {
 
-	var name = prompt("Please enter your initials", "");
-   
+	var initials = prompt("Please enter your initials", "");
+
+    var userscore = {
+        initials: initials,
+        score: score,
+    };
+
+    let scoresFromStorage = window.localStorage.getItem("jenya");
+    console.log(scoresFromStorage);
+
+    if(scoresFromStorage) {
+        allScores = JSON.parse(scoresFromStorage);
+    }
+    allScores.push(userscore);
+    window.localStorage.setItem("jenya", JSON.stringify(allScores));
+
+    //TODO - figure out how to display the score history
+    //allScores.forEach(function(s){
+        //console.log(s.score);
+        //scoreHistory.textContent += `${s.initials} Past Score: ${s.score}/${questions.length} in Time : ${quizTime}`
+    //})
+    
+
 	nextBtnEl.style.visibility = "hidden";
 	clearInterval(quizTimer);
 	currentQuestionIndex =0;
 	currentQuestionEl.textContent = "";
 	questionBtnEl.innerHTML = ""
-	timerEl.textContent = `${name} Your Score: ${score}/${questions.length} in Time : ${quizTime}`
+	timerEl.textContent = `${initials} Your Score: ${score}/${questions.length} in Time : ${quizTime}`
 	score=0;
 	quizTime=120;	
 	startBtnEl.style.visibility = "visible";
+
+
+    
 }
 
 //Initiate
